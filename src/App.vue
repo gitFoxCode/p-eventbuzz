@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <svg-sprite />
+  <Nav />
+  <Hero />
+  <Programs />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Nav from "./components/Nav.vue";
+import Hero from "./sections/Hero.vue";
+import Programs from "./sections/Programs.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    Hero,
+    Nav,
+    Programs
   }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+  @import '~@/assets/scss/reset.scss';
+  *,*::after,*::before{
+    box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  body{
+    background-color: #FAFAFA;
+    font-family: "Poppins", sans-serif;
+  }
+  a.button{
+    color: #fff;
+    padding: 10px 25px;
+    background-color: #EC398A;
+    border-radius: 25px;
+  }
+  a.button:hover{
+    letter-spacing: 0;
+  }
 </style>
